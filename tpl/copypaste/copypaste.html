@@ -1,0 +1,59 @@
+<div class="dropdown input-group copypaste">
+
+    <button class="button main-button" type="button" title="Copy rules" onclick="trsCopy(event)">
+        <i class="fa fa-check done-icon"></i><i class="fa fa-copy main-icon"></i>
+    </button>
+
+    <button class="button input-decorator right dropdown-handle" type="button">
+        <i class="fa fa-caret-down"></i>
+    </button>
+
+    <ul class="dropdown-menu">
+        <li>
+            <a onclick="trsPaste()">
+                Paste
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!--suppress CssUnusedSymbol -->
+<style>
+    .trs .copypaste {
+        position: absolute;
+        right: 0;
+        vertical-align: bottom;
+    }
+
+    .trs .copypaste .main-button {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        overflow: hidden;
+    }
+
+    .trs .copypaste .done-icon {
+        width: 0;
+        overflow: visible;
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    .trs .copypaste .done .done-icon {
+        opacity: 1;
+        transform: translateY(0);
+        transition: transform .2s ease;
+    }
+
+
+    .trs .copypaste .main-icon {
+        transition: opacity .5s ease;
+        opacity: 1;
+    }
+
+    .trs .copypaste .done .main-icon {
+        opacity: 0;
+        transform: translateY(-30px);
+        transition: transform .2s ease, opacity .5s;
+    }
+
+</style>

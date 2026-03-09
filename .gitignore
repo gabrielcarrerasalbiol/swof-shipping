@@ -1,0 +1,25 @@
+# Composer dependencies
+/vendor/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# WordPress specific
+*.log
+.env
+
+# Build artifacts
+node_modules/
+dist/
+build/
+
+# Testing
+.phpunit.result.cache
