@@ -38,16 +38,16 @@ define('SWOFSHIPPING_VERSION', '1.0.0');
 define('SWOFSHIPPING_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('SWOFSHIPPING_PLUGIN_URL', plugin_dir_url(__FILE__));
 
-use SwofShippingVendors\Dgm\WpPluginBootstrapGuard\Guard;
+use TrsVendors\Dgm\WpPluginBootstrapGuard\Guard;
 
 if (!class_exists(Guard::class, false)) {
     require_once(__DIR__ . '/vendor/dangoodman/wp-plugin-bootstrap-guard/Guard.php');
 }
 
 Guard::checkPrerequisitesAndBootstrap(
-    'SwofCommerce Shipping', 
-    '7.4', 
-    '5.0', 
-    '7.0', 
+    'SwofCommerce Shipping',
+    '7.4',
+    '5.0',
+    '7.0',
     __DIR__ . '/bootstrap.php'
 );
