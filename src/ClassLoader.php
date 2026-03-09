@@ -10,7 +10,7 @@ class ClassLoader
 {
     public function setup(PluginMeta $pluginMeta)
     {
-        /** @var \SwofShippingVendors\Composer\Autoload\ClassLoader $autoloader */
+        /** @var \TrsVendors\Composer\Autoload\ClassLoader $autoloader */
         $autoloader = include($pluginMeta->getLibsPath('autoload.php'));
 
         // shipping_method alias class

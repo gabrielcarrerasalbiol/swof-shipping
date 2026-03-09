@@ -12,7 +12,7 @@ class Loader
 {
     public function __construct(PluginMeta $pluginMeta)
     {
-        $this->pluginMeta = $ pluginMeta;
+        $this->pluginMeta = $pluginMeta;
     }
     
     public function bootstrap(): void
