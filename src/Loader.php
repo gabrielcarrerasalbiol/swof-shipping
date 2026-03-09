@@ -168,14 +168,14 @@ class Loader
     private function installServices(): void
     {
         $services = array(
-            new IisCompatService($this->pluginMeta),
-            new UpdateService($this->pluginMeta),
-            new StatsService($this->pluginMeta),
+            new \Trs\IisCompatService($this->pluginMeta),
+            new \Trs\UpdateService($this->pluginMeta),
+            new \Trs\StatsService($this->pluginMeta),
             self::createMigrationService($this->pluginMeta),
-            new ApiService(),
+            new \Trs\ApiService(),
         );
 
-        $installer = new ServiceInstaller();
+        $installer = new \Trs\ServiceInstaller();
         foreach ($services as $service) {
             $installer->installIfReady($service);
         }

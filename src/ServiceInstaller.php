@@ -1,5 +1,5 @@
 <?php
-namespace SwofShipping;
+namespace Trs;
 
 class ServiceInstaller
 {

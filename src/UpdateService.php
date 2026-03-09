@@ -1,7 +1,7 @@
 <?php
-namespace SwofShipping;
+namespace Trs;
 
-use SwofShipping\PluginMeta;
+use Trs\PluginMeta;
 
 class UpdateService
 {
