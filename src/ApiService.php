@@ -1,15 +1,6 @@
 <?php
 namespace Trs;
 
-class ApiService
+class ApiService extends \Trs\Services\ApiService
 {
-    public function isReady()
-    {
-        return false;
-    }
-
-    public function install()
-    {
-        // Stub implementation
-    }
 }

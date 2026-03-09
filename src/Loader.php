@@ -1,12 +1,11 @@
 <?php
+declare(strict_types=1);
+
 namespace SwofShipping;
 
-use TrsVendors\Dgm\Shengine\Woocommerce\Converters\PackageConverter;
-use TrsVendors\Dgm\Shengine\Woocommerce\Converters\RateConverter;
-use TrsVendors\Dgm\Shengine\Units;
-use TrsVendors\Dgm\WcTools\WcTools;
-use WC_Shipping_Method;
-use SwofShipping\Woocommerce\ShippingMethodCalculatorMapper;
+use Trs\EnqueueAssets;
+use Trs\Woocommerce\ShippingMethod;
+use Trs\Migrations\ConfigStorage;
 
 class Loader
 {
@@ -87,6 +86,7 @@ class Loader
         }
 
         $instanceId = $_REQUEST['instance_id'] ?? null;
+        $instanceId = is_scalar($instanceId) ? absint((string)$instanceId) : null;
         if (isset($instanceId) &&
             class_exists('\\WC_Shipping_Zones') &&
             ($method = \WC_Shipping_Zones::get_shipping_method($instanceId)) &&
