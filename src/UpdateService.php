@@ -1,13 +1,11 @@
 <?php
 namespace Trs;
 
-use Trs\PluginMeta;
-
 class UpdateService
 {
     private $pluginMeta;
 
-    public function __construct(PluginMeta $pluginMeta)
+    public function __construct($pluginMeta)
     {
         $this->pluginMeta = $pluginMeta;
     }
